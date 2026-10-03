@@ -176,6 +176,13 @@ All attachments are saved in the chosen directory."
   (interactive nil elfeed-show-mode)
   (elfeed-show-tag 'unread))
 
+(defun elfeed-show-tag-unread-quit-window ()
+  "Tag the current entry as unread, then call `quit-window'."
+  (interactive nil elfeed-show-mode)
+  (with-current-buffer (current-buffer)
+    (elfeed-show-tag-unread)
+    (quit-window)))
+
 (defun elfeed-show--format-author (author)
   "Format AUTHOR plist for the header."
   (cl-destructuring-bind (&key name uri email &allow-other-keys)
