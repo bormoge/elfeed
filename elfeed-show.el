@@ -123,6 +123,7 @@ All attachments are saved in the chosen directory."
   "<mouse-2>" #'shr-browse-url
   "A" #'elfeed-show-add-enclosure-to-playlist
   "P" #'elfeed-show-play-enclosure
+  "Q" #'elfeed-show-tag-unread-quit-window
   "R" #'elfeed-show-readable
   "SPC" #'elfeed-show-scroll-up-or-next
   "S-SPC" #'elfeed-show-scroll-down-or-prev
@@ -153,6 +154,7 @@ All attachments are saved in the chosen directory."
     "--"
     ["Revert buffer" revert-buffer]
     ["Quit window" quit-window]
+    ["Tag as unread and quit window" elfeed-show-tag-unread-quit-window]
     "--"
     ["Customize" (customize-group 'elfeed)]))
 
